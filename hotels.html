@@ -25,77 +25,65 @@
       </nav>
     </header>
     <main>
-      <form
-        action="https://echo.htmlacademy.ru"
-        method="GET"
-        name="filter-hotels-sedona"
-      >
-        <div>
-          <fieldset>
-            <legend>Инфраструктура:</legend>
-            <ul>
-              <li>
-                <input
-                  type="checkbox"
-                  name="waterpol-filter"
-                  id="waterpol-filter"
-                  value="Бассейн"
-                  checked
-                />Бассейн
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  name="parking-filter"
-                  id="parking-filter"
-                  value="Парковка"
-                />Парковка
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  name="wifi-filter"
-                  id="wifi-filter"
-                  value="Wi-Fi"
-                />Wi-Fi
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <legend>Тип жилья:</legend>
-            <ul>
-              <li>
-                <input
-                  type="checkbox"
-                  name="hotel-filter"
-                  id="hotel-filter"
-                  value="Гостиница"
-                  checked
-                />Гостиница
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  name="motel-filter"
-                  id="motel-filter"
-                  value="Мотель"
-                  checked
-                />Мотель
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  name="apartment-filter"
-                  id="apartment-filter"
-                  value="Апартаменты"
-                  checked
-                />Апартаменты
-              </li>
-            </ul>
-          </fieldset>
-        </div>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                name="waterpol-filter"
+                id="waterpol-filter"
+                checked
+              />
+              <label for="waterpol-filter">Бассейн</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="parking-filter"
+                id="parking-filter"
+              />
+              <label for="parking-filter">Парковка</label>
+            </li>
+            <li>
+              <input type="checkbox" name="wifi-filter" id="wifi-filter" />
+              <label for="wifi-filter">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                name="hotel-filter"
+                id="hotel-filter"
+                checked
+              />
+              <label for="hotel-filter">Гостиница</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="motel-filter"
+                id="motel-filter"
+                checked
+              />
+              <label for="motel-filter">Мотель</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                name="apartment-filter"
+                id="apartment-filter"
+                checked
+              />
+              <label for="apartment-filter">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
         <div>
           <p>Стоимость в сутки (Р):</p>
           <span>от 0</span
@@ -107,25 +95,25 @@
             max="3000"
             step="100"
           /><span>до 3000</span>
-          <button type="submit" value="показать">Показать</button>
+          <button type="submit">Показать</button>
         </div>
       </form>
       <section>
         <p>Найдено: 3</p>
         <p>Сортировка</p>
         <ul>
-          <li><button type="button" value="по цене">По цене</button></li>
-          <li><button type="button" value="по типу">По типу</button></li>
+          <li><button type="button">По цене</button></li>
+          <li><button type="button">По типу</button></li>
           <li>
-            <button type="button" value="по рейтингку">По рейтингу</button>
+            <button type="button">По рейтингу</button>
           </li>
         </ul>
         <ul>
           <li>
-            <button type="button" value="по возрастанию">По возрастанию</button>
+            <button type="button">По возрастанию</button>
           </li>
           <li>
-            <button type="button" value="по убыванию">По убыванию</button>
+            <button type="button">По убыванию</button>
           </li>
         </ul>
       </section>

@@ -98,13 +98,13 @@
           предложения гостиниц в седоне
         </p>
           <button>Поиск гостиницы в седоне</button>
-          <form action="https://echo.htmlacademy.ru" method="GET" name="search-hotel-sedona">
+          <form action="https://echo.htmlacademy.ru" method="POST">
           <p>
-            <label for="date_in">Дата заезда</label>
+            <label for="date-in">Дата заезда</label>
             <input id="date-in" type="text" name="date-in" placeholder="24 апреля 2017">
           </p>
           <p>
-            <label for="date_out">Дата выезда</label>
+            <label for="date-out">Дата выезда</label>
             <input id="date-out" type="text" name="date-out" placeholder="4 июля 2017">
           </p>
           <p>
@@ -116,7 +116,7 @@
           <p>
             <label for="kids">Дети</label>
             <button type="button">-</button>
-            <input id="kids" type="text" name="adult" value="0">
+            <input id="kids" type="text" name="kids" value="0">
             <button type="button">+</button>
           </p>
           <button type="submit">Найти</button>
