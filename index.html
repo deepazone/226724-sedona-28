@@ -5,12 +5,14 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -22,11 +24,11 @@
       </nav>
     </header>
     <main>
-      <div style="background-color:#81B3D2; text-align: center;">
+      <div class="main-image">
         <img src="img/welcome.svg" width="351" height="456" alt="Welcome to the gorgeous Sedona" />
       </div>
-      <section>
-        <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <section class="sedona-city">
+        <h1>Седона — небольшой городок в Аризоне, <br> заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
       <section>
@@ -85,16 +87,16 @@
             и толпится там</p>
         </div>
       </section>
-      <section>
-        <p>
-          Заинтересовались?
-        </p>
-        <p>
-          Укажите предполагаемые даты поездки,  и мы покажем вам лучшие
+      <section class="interested">
+        <p class="paragraph">
+          <span>Заинтересовались?</span><br>
+          Укажите предполагаемые даты поездки, <br>  и мы покажем вам лучшие
           предложения гостиниц в седоне
         </p>
-        <button>Поиск гостиницы в седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="POST">
+        <button class="search">
+          Поиск гостиницы в седоне
+        </button>
+        <form class="form-search" action="https://echo.htmlacademy.ru" method="POST">
           <p>
             <label for="date-in">Дата заезда</label>
             <input id="date-in" type="text" name="date-in" placeholder="24 апреля 2017">
@@ -123,15 +125,15 @@
       </section>
     </main>
     <footer>
-      <div>
+      <div class="contact-sedona">
         <p>#visitSEDONA</p>
         <p>ТЕЛ: +7(495) 666-01-06</p>
       </div>
       <div>
-        <ul>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">youtube</a></li>
+        <ul class="icon-set">
+          <li class="twitter"><a href="#"></a> <span>twitter</span></li>
+          <li class="facebook"><a href="#"></a> <span>facebook</span></li>
+          <li class="youtube"><a href="#"></a><span>youtube</span></li>
         </ul>
       </div>
       <div>
@@ -140,7 +142,6 @@
             alt="Логотип HTML Academy" /></a>
       </div>
     </footer>
-  </body>
   </body>
 
 </html>
