@@ -137,6 +137,7 @@ footer {
     margin: 5px;
 }
 
+
 .facebook {
     background-image: url(../img/fb-icon.svg);
     background-repeat: no-repeat;
@@ -154,6 +155,22 @@ footer {
     background-position: center;
     margin: 5px;
 }
+
+.twitter:hover,
+.twitter:focus, 
+.facebook:hover,
+.facebook:focus,
+.youtube:hover
+.youtube:focus{
+    background-color: var(--basic-blue-hover);
+}
+
+.twitter:active,
+.facebook:active,
+.youtube:active {
+    background-color: var(--basic-blue-active);
+}
+
 .form-search {
 display: none }
 
@@ -173,6 +190,15 @@ display: none }
     padding: 10px;
 }
 
+.details:hover,
+.details:focus {
+    background-color: var(--basic-blue-hover);
+}
+
+.details:active {
+    background-color: var(--basic-blue-active);
+}
+
 .reserved {
     background-color: var(--basic-brown-normal);
     color: var(--basic-white);
@@ -180,8 +206,21 @@ display: none }
     font-size: 14px;
 }
 
+.reserved:hover,
+.reserved:focus {
+    background-color: var(--basic-brown-hover);
+}
+
+.reserved:active {
+    background-color: var(--basic-brown-active);
+}
+
 .rank {
     background-color: var(--basic-grey);
     padding: 5px 12px;
     width: fit-content;
+}
+
+.logo-academy {
+    color: var(--basic-blue-hover);
 }
