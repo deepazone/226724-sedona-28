@@ -2,8 +2,9 @@
   --basic-black: #000000;
   
   --basic-white: #ffffff;
-  --basic-active-link: #231F20;
+  --basic-white-opacity: rgba(255, 255, 255, 0.9);
 
+  --basic-active-link: #231F20;
   --basic-blue-normal: #81B3D2;
   --basic-blue-hover: #669EC0;
   --basic-blue-active: #5496BD;
@@ -13,6 +14,8 @@
   --basic-brown-active: #503E33;
   --basic-grey: #F2F2F2;
 }
+
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
 	margin: 0;
@@ -123,14 +126,12 @@ button {
 }
 
 footer {
-    background-color: var(--basic-white);
-    opacity: 0.9;
+    background-color: var(--basic-white-opacity); 
 }
 
 .icon-set {
    list-style: none;
    margin: 0;
-   width: fit-content;
 }
 
 .twitter {
@@ -167,7 +168,7 @@ footer {
 .twitter:focus, 
 .facebook:hover,
 .facebook:focus,
-.youtube:hover
+.youtube:hover,
 .youtube:focus{
     background-color: var(--basic-blue-hover);
 }
