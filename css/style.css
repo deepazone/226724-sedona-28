@@ -33,7 +33,7 @@ img {
   	height: auto;
 }
 
-h1 { 
+.main-headline { 
     font-size: 21px;
     text-align: center;
     padding-top: 42px; 
@@ -103,12 +103,6 @@ h1 {
     font-weight: 700;
 }
 
-button {
-    text-transform: uppercase;
-    border: none;
-    font-family: inherit;
-}
-
 .search {
     padding: 30px 125px;
     background-color: var(--basic-brown-normal);
@@ -125,7 +119,7 @@ button {
     background-color: var(--basic-brown-hover);
 }
 
-footer {
+.main-footer {
     background-color: var(--basic-white-opacity); 
 }
 
