@@ -20,7 +20,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-	margin: 0;
+	margin: 0 auto;
     padding: 0;
 	font-family: 'PT Sans', Arial, sans-serif;
 	text-transform: uppercase; 
@@ -28,16 +28,12 @@ body {
     line-height: 26px;
     font-weight: 400;
     color: var(--basic-black);
+    max-width: 1200px;
 }
 
 img {
   	max-width: 100%;
   	height: auto;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
 }
 
 .main-headline { 
@@ -252,38 +248,55 @@ fieldset {
     color: var(--basic-blue-hover);
 }
 
-.features-1, .features-2{
-    background-color: var(--basic-blue-normal);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: auto;
-    flex-wrap: wrap;
-}
-
-.features-tagline{
+.features-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     color: var(--basic-white);
     margin: 0 auto;
+    background-color: var(--basic-blue-normal);
+    align-items: center;
+}
+
+.features-info  img{
+    grid-column: 1 / 3;
+}
+
+.features-info.realy-city img{
+    grid-column: 2 / 4;
 }
 
 .features-list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     background-color: var(--basic-background-grey);
 }
 
-.features-2 {
-    flex-direction: row-reverse;
+.features-item {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.features-item h3{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.features-list h3 {
+    padding-top: 47px;
 }
 
 .filter-list ul{
     margin: 0;
     list-style: none;
     padding-left: 0;
-    line-height: 0px;
     padding-bottom: 32px;
+}
+
+.filter-list fieldset {
+    border: none;
+    padding: 0;
 }
 
 .form-filter {
@@ -304,23 +317,9 @@ fieldset {
     padding-top: 26px;
 }
 
-.filter-range p:first-child{
-    border: solid var(--basic-white) 2px;
-    padding: 6px 50px;
-}
-.filter-range {
-    display: flex;
-    justify-content: space-between;
-}
-
 .filter-price h3{
     margin: 0;
     padding-top: 26px;
-}
-
-.filter-range p:last-child{
-    border: solid var(--basic-white) 2px;
-    padding: 6px 37px;
 }
 
 .button-view {
