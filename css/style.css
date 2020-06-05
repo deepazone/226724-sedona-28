@@ -249,25 +249,26 @@ img {
 }
 
 .features {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     text-align: center;
 }
 
-.feature-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.feature-info.promo {
+.feature-info.real-city {
     display: flex;
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     align-items: center;
 }
 
-.feature-item {
+.feature-item.real-city {
+    width: 400px;
+}
+
+.feature-facts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-item.real-city {
     width: 300px;
     margin: 0 auto;
 }
@@ -277,14 +278,21 @@ img {
     margin: 0 auto;
 }
 
-.filter-list ul{
+.feature-info.devil-bridge {
+    display: flex;
+    background-color: var(--basic-blue-normal);
+    color: var(--basic-white);
+    align-items: center;
+}
+
+.filter-list {
     margin: 0;
     list-style: none;
     padding-left: 0;
     padding-bottom: 32px;
 }
 
-.filter-list fieldset {
+.form-filter fieldset {
     border: none;
     padding: 0;
 }
