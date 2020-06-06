@@ -73,8 +73,9 @@ img {
 
 .logo-main-header {
     position: absolute;
-    top: 0px;
-    right: 44%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .site-navigation a{
