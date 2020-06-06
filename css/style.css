@@ -31,6 +31,7 @@ body {
     color: var(--basic-black);
     max-width: 1200px;
     position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 img {
@@ -332,6 +333,8 @@ img {
 .sorting ul {
     padding-left: 0;
 }
+
+
   
 .sorting button {
     padding: 0px;
@@ -355,7 +358,7 @@ img {
     opacity: 1;
 }
   
-.sorting p:first-child {
+.found {
     font-size: 21px;
     font-weight: 700;
 }
@@ -427,7 +430,7 @@ img {
     grid-template-columns: 110px 142px;
 }
   
-.hotel-card-container {
+.hotel-cards-container {
     padding-bottom: 124px;
 }
 
@@ -441,6 +444,7 @@ img {
     color: var(--basic-white);
     align-items: center;
 }
+
 
 .feature-item.real-city {
     width: 400px;
