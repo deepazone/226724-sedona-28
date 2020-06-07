@@ -293,6 +293,8 @@ img {
 }
 
 .form-filter {
+    background-image: url(../img/filter-blur-background.jpg);
+    background-repeat: no-repeat;
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     display: flex;
@@ -325,6 +327,11 @@ img {
     display: block;
 }
   
+.sorting {
+    padding-left: 76px;
+    padding-right: 71px;
+}
+
 .sorting li {
     list-style: none;
     background: transparent;
@@ -382,14 +389,16 @@ img {
     padding: 0px;
 }
   
-.main-footer p {
-    margin: 0;
+.footer-hashtag {
+    margin-top: 23px;
+    margin-bottom: 0;
 }
-  
-.contact-sedona p:last-child {
-    padding-top: 5px;
+
+.footer-phone {
+    margin-top: 10px;
+    margin-bottom: 37px;
 }
-  
+
 .academy-link {
     display: flex;
     align-items: center;
@@ -401,12 +410,13 @@ img {
   
 .hotel-card {
     display: grid;
-    width: 1200px;
     grid-template-columns: 135px 1fr 110px;
     min-height: 50px;
     border-bottom: solid var(--basic-frame-grey) 1px;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 71px;
+    padding-right: 73px;
 }
   
 .hotel-info a {
