@@ -22,7 +22,7 @@
   
 body {
     margin: 0 auto;
-    max-width: 1200px;
+    width: 1200px;
     padding: 0;
     font-family: 'PT Sans', Arial, sans-serif;
     text-transform: uppercase; 
@@ -281,11 +281,10 @@ img {
     color: var(--basic-blue-hover);
 }
 
-.filter-list ul{
+.form-filter ul{
     margin: 0;
     list-style: none;
     padding-left: 0;
-    padding-bottom: 32px;
 }
 
 .form-filter fieldset {
@@ -293,22 +292,30 @@ img {
   padding: 0;
 }
 
+fieldset:nth-of-type(2) {
+    margin-right: 340px;
+}
+ 
+
 .form-filter {
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
+    background-image: url(../img/filter-blur-background.jpg);
+    background-repeat: no-repeat;
+    min-height: 217px;
 }
 
 .form-filter legend {
     font-size: 16px;
     font-weight: 700;
-    padding-top: 26px;
 }
 
 .form-filter li {
-    padding-top: 26px;
+    margin-bottom: 0;
+    margin-top: 23px;
 }
 
 .filter-price h3{
@@ -326,17 +333,42 @@ img {
     display: block;
 }
 
+.sorting {
+    display: flex;
+    align-items: center;
+    padding-left: 73px;
+    padding-right: 73px;
+}
+
 .sorting li {
     list-style: none;
     background: transparent;
 }
+
+.found {
+    font-size: 21px;
+    font-weight: 700;
+    min-width: 162px;
+}
   
-.sorting ul {
-    padding-left: 0;
+.sort {
+    padding-right: 40px;
 }
 
+.sort-type {
+    padding-left: 0px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
 
-  
+.sort-rating {
+    display: flex;
+    padding-left: 0px;
+    flex-grow: 3;
+    justify-content: flex-end;
+}
+
 .at-type {
     padding: 0px;
     background: transparent;
@@ -359,7 +391,7 @@ img {
     opacity: 1;
 }
   
-.at-price {
+.at-rating {
     padding: 0px;
     background: transparent;
     border: none;
@@ -368,22 +400,17 @@ img {
     border-bottom: 1px dashed var(--basic-blue-normal);
 }
   
-.at-price:hover, 
-.at-price:focus {
+.at-rating:hover, 
+.at-rating:focus {
     color: var(--basic-blue-normal);
     border-bottom: 1px dashed var(--basic-blue-normal);
     opacity: 1;
 }
   
-.at-price:active {
+.at-rating:active {
     border: none;
     color: var(--basic-black);
     opacity: 1;
-}
-
-.found {
-    font-size: 21px;
-    font-weight: 700;
 }
   
 .icon-set {
@@ -457,21 +484,10 @@ img {
     padding-bottom: 124px;
 }
 
-.filter-list {
-    margin: 0;
-    list-style: none;
-    padding-left: 0;
-    padding-bottom: 32px;
-}
-
 .features {
     display: flex;
     flex-wrap: wrap;
 }
-
-.features > div {
-    flex-grow: 1;
-  }
 
 .feature-info {
     background-color: var(--basic-grey);
@@ -486,17 +502,12 @@ img {
 .feature-item {
     min-width: 400px;
     text-align: center;
-    align-items: center;
 }
 
 .feature-facts {
     display: flex;
     flex-wrap: wrap;
 }
-
-.feature-facts > div {
-    flex-grow: 1;
-  }
 
 .fact-item {
     width: 400px;
@@ -509,18 +520,23 @@ img {
     align-items: stretch; 
 }
 
-.real-city > div {
-    display: flex;
-    flex-grow: 1;
+.real-city .feature-item {    
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     width: 400px;
-    flex-direction: column;
-    justify-content: center;    
+    padding-right: 52px;
+    padding-left: 52px;
+    padding-top: 47px;
 }
 
-.real-city > img {
-    flex-grow: 1;
+.real-city h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.real-city p {
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .feature-info.devil-bridge {
@@ -529,16 +545,21 @@ img {
     align-items: stretch;
 } 
 
-.devil-bridge > div {
-    display: flex;
-    flex-grow: 1;
+.devil-bridge .feature-item{
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     width: 400px;
-    flex-direction: column;
-    justify-content: center;
+    padding-right: 49px;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 
-.devil-bridge > img {
-    flex-grow: 1;
+.devil-bridge h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.devil-bridge p {
+    margin-top: 0;
+    margin-bottom: 25px;
 }

@@ -26,58 +26,56 @@
       </header>
       <main>
         <form class="form-filter" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="filter-list">
-            <fieldset>
-              <legend>Инфраструктура:</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="waterpol-filter" id="waterpol-filter" checked />
-                  <label for="waterpol-filter">Бассейн</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="parking-filter" id="parking-filter" />
-                  <label for="parking-filter">Парковка</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="wifi-filter" id="wifi-filter" />
-                  <label for="wifi-filter">Wi-Fi</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="filter-list">
-            <fieldset>
-              <legend>Тип жилья:</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="hotel-filter" id="hotel-filter" checked />
-                  <label for="hotel-filter">Гостиница</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="motel-filter" id="motel-filter" checked />
-                  <label for="motel-filter">Мотель</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="apartment-filter" id="apartment-filter" checked />
-                  <label for="apartment-filter">Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <div class="filter-price">
-            <h3>Стоимость в сутки (Р):</h3>
+
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="waterpol-filter" id="waterpol-filter" checked />
+                <label for="waterpol-filter">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking-filter" id="parking-filter" />
+                <label for="parking-filter">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wifi-filter" id="wifi-filter" />
+                <label for="wifi-filter">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel-filter" id="hotel-filter" checked />
+                <label for="hotel-filter">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel-filter" id="motel-filter" checked />
+                <label for="motel-filter">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartment-filter" id="apartment-filter" checked />
+                <label for="apartment-filter">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
             <div class="filter-range">
               <p>от 0 </p>
               <p>до 3000</p>
             </div>
             <input type="range" name="summa" id="summa" min="0" max="3000" step="100" />
             <button class="button-view" type="submit">Показать</button>
-          </div>
+          </fieldset>
         </form>
         <section class="sorting">
           <p class="found">Найдено: 3</p>
           <p class="sort">Сортировка</p>
-          <ul>
+          <ul class="sort-type">
             <li>
               <button class="at-type" type="button">По цене</button>
             </li>
@@ -88,12 +86,12 @@
               <button class="at-type" type="button">По рейтингу</button>
             </li>
           </ul>
-          <ul>
+          <ul class="sort-rating">
             <li>
-              <button class="at-price" type="button">По возрастанию</button>
+              <button class="at-rating" type="button">По возрастанию</button>
             </li>
             <li>
-              <button class="at-price" type="button">По убыванию</button>
+              <button class="at-rating" type="button">По убыванию</button>
             </li>
           </ul>
         </section>
