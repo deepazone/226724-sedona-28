@@ -513,13 +513,6 @@ fieldset:nth-of-type(2) {
     color: var(--basic-black);
     opacity: 1;
 }
-  
-
-.at-rating {
-    padding: 0px;
-    background: transparent;
-    border: none;    
-}
 
 .sort-rating li:last-child {
     margin-left: 12px;
@@ -530,13 +523,19 @@ fieldset:nth-of-type(2) {
     fill: var(--basic-icon-normal);
 } 
 
-button:hover .icon-up-rating,
-button:hover .icon-down-rating {
+.at-rating {
+    padding: 0px;
+    background: transparent;
+    border: none;    
+}
+
+.at-rating:hover .icon-up-rating,
+.at-rating:hover .icon-down-rating {
     fill: var(--basic-black);
 } 
 
-button:active .icon-up-rating,
-button:active .icon-down-rating{
+.at-rating:active .icon-up-rating,
+.at-rating:active .icon-down-rating {
     fill: var(--basic-blue-hover);
 } 
 
@@ -555,7 +554,7 @@ button:active .icon-down-rating{
     min-width: 100%;
 }
   
-.main-footer ul{
+.main-footer ul {
     padding: 0px;
 }
   
