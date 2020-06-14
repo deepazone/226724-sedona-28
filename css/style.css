@@ -532,21 +532,6 @@ li:first-child .sort-rating::before{
     border-bottom: 1px dashed var(--basic-blue-normal);    
 }
 
-/*
-.at-rating:hover, 
-.at-rating:focus {
-    color: var(--basic-blue-normal);
-    border-bottom: 1px dashed var(--basic-blue-normal);
-    opacity: 1;
-}
-  
-.at-rating:active {
-    border: none;
-    color: var(--basic-black);
-    opacity: 1;
-}
-*/
-
 .sort-rating li:first-child {
     background-image: url(../img/icon-down-dir-normal.svg);
     width: 11px;
