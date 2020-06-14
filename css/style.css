@@ -17,6 +17,7 @@
     --basic-background-grey: #EEEEEE;
     --basic-frame-grey: #E5E5E5;
     --basic-form-grey: #A9A9A9;
+    --basic-icon-normal: #CACACA;
 }
   
 *, *::before, *::after { box-sizing: border-box; }
@@ -108,10 +109,8 @@ img {
 }
 
 .main-image::after{
-    content: url(../img/shape.svg);
+    content: url(../img/main-image-shape.svg);
     position: absolute;
-    bottom: 0;
-    right: 50%;
     bottom: -9px;
     right: 50%;
     transform: translateX(50%);
@@ -251,6 +250,7 @@ img {
     font-size: 14px;
     line-height: 26px;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .search-submit {
@@ -267,7 +267,7 @@ img {
 }
 
 .search-departure,
-.search-comin {
+.search-coming {
     position: relative;
     width: 100%;
     display: flex;
@@ -275,13 +275,13 @@ img {
 }    
 
 .search-departure input,
-.search-comin input {
+.search-coming input {
     width: 330px;
     padding-left: 12px;
 }
 
 .search-departure::after,
-.search-comin::after {
+.search-coming::after {
     content: url("../img/calendar.svg");
     width: 21px;
     height: 23px;
@@ -329,11 +329,6 @@ img {
     border: none;
     margin-bottom: 30px;
     margin-left: -4px;
-}
-
-.form-search p {
-    margin: 0;
-    padding: 0;
 }
 
 .contact-sedona {
@@ -497,10 +492,6 @@ fieldset:nth-of-type(2) {
     justify-content: flex-end;
 }
 
-li:first-child .sort-rating::before{
-    
-}
-
 .at-type {
     padding: 0px;
     background: transparent;
@@ -523,53 +514,28 @@ li:first-child .sort-rating::before{
     opacity: 1;
 }
   
+
 .at-rating {
     padding: 0px;
     background: transparent;
-    border: none;
-    opacity: 0.3;
-    text-transform: uppercase;
-    border-bottom: 1px dashed var(--basic-blue-normal);    
+    border: none;    
 }
 
-.sort-rating li:first-child {
-    background-image: url(../img/icon-down-dir-normal.svg);
-    width: 11px;
-    height: 10px;
-    margin-right: 12px;
-}
+.icon-up-rating,
+.icon-down-rating {
+    margin-left: 12px;
+    fill: var(--basic-icon-normal);
+} 
 
-.sort-rating li:last-child {
-    background-image: url(../img/icon-up-dir-normal.svg);
-    width: 11px;
-    height: 10px;
-}
+.icon-up-rating:hover,
+.icon-down-rating:hover {
+    fill: var(--basic-black);
+} 
 
-.sort-rating li:last-child:hover,
-.sort-rating li:last-child:focus  {
-    background-image: url(../img/icon-up-dir-hover.svg);
-    width: 11px;
-    height: 10px;
-}
-
-.sort-rating li:first-child:hover,
-.sort-rating li:first-child:focus {
-    background-image: url(../img/icon-down-dir-hover.svg);
-    width: 11px;
-    height: 10px;
-}
-
-.sort-rating li:last-child:active {
-    background-image: url(../img/icon-up-dir-active.svg);
-    width: 11px;
-    height: 10px;
-}
-
-.sort-rating li:first-child:active {
-    background-image: url(../img/icon-down-dir-active.svg);
-    width: 11px;
-    height: 10px;
-}
+.icon-up-rating:active,
+.icon-down-rating:active {
+    fill: var(--basic-blue-hover);
+} 
 
 .icon-set {
     display: flex;
