@@ -521,19 +521,22 @@ fieldset:nth-of-type(2) {
     border: none;    
 }
 
-.icon-up-rating,
-.icon-down-rating {
+.sort-rating li:last-child {
     margin-left: 12px;
+}
+
+.icon-up-rating,
+.icon-down-rating{
     fill: var(--basic-icon-normal);
 } 
 
-.icon-up-rating:hover,
-.icon-down-rating:hover {
+button:hover .icon-up-rating,
+button:hover .icon-down-rating {
     fill: var(--basic-black);
 } 
 
-.icon-up-rating:active,
-.icon-down-rating:active {
+button:active .icon-up-rating,
+button:active .icon-down-rating{
     fill: var(--basic-blue-hover);
 } 
 
