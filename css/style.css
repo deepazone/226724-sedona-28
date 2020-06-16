@@ -4,6 +4,7 @@
     --basic-white: #ffffff;
     --basic-white-opacity: rgba(255, 255, 255, 0.9);
     --basic-white-opacity3: rgba(255, 255, 255, 0.3);
+    --basic-grey-opacity3: rgba(35, 31, 32, 0.3);
   
     --basic-active-link: #231F20;
     --basic-blue-normal: #81B3D2;
@@ -18,6 +19,9 @@
     --basic-frame-grey: #E5E5E5;
     --basic-form-grey: #A9A9A9;
     --basic-icon-normal: #CACACA;
+    --basic-features-subtitle: #333333;
+    --basic-form-hover: #EBEBEB;
+    --basic-academy-hover: #BDBBBC;
 }
   
 *, *::before, *::after { box-sizing: border-box; }
@@ -45,7 +49,6 @@ img {
 .main-headline { 
     font-size: 21px;
     text-align: center;
-    padding-top: 42px; 
     margin: 0;
 }
 
@@ -124,6 +127,10 @@ img {
     padding-bottom: 51px;
 }
 
+.sedona-city p {
+    margin-top: 45px;
+}
+
 .interested {
     text-align: center;
 }
@@ -162,9 +169,13 @@ img {
     border: none;
 }
 
-.search:hover, 
+.search:hover { 
+    background-color: var(--basic-brown-hover); 
+}
+ 
 .search:active { 
-    background-color: var(--basic-brown-hover);
+    background-color: var(--basic-brown-active);
+    color: var(--basic-white-opacity3);
 }
 
 .main-footer {
@@ -266,6 +277,15 @@ img {
     padding-bottom: 16px;
 }
 
+.search-submit:hover {
+    background-color: var(--basic-blue-hover);
+}
+
+.search-submit:active {
+    background-color: var(--basic-blue-active);
+    color: var(--basic-white-opacity3);
+}
+
 .search-departure,
 .search-coming {
     position: relative;
@@ -280,14 +300,25 @@ img {
     padding-left: 12px;
 }
 
-.search-departure::after,
-.search-coming::after {
-    content: url("../img/calendar.svg");
-    width: 21px;
-    height: 23px;
+.calendar-button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
     position: absolute;
     right: 10px;
-    top: 7px;
+    top: 5px;
+}
+
+.calendar-button svg {
+    fill: var(--basic-form-grey);
+}
+
+.calendar-button svg:hover {
+    fill: var(--basic-black);
+}
+
+.calendar-button svg:active {
+    fill: var(--basic-blue-normal);
 }
 
 .search-adult input,
@@ -329,6 +360,14 @@ img {
     border: none;
     margin-bottom: 30px;
     margin-left: -4px;
+}
+
+.form-search input:hover {
+    background-color: var(--basic-form-hover);
+}
+
+.form-search input:active {
+    background-color: var(--basic-white);
 }
 
 .contact-sedona {
@@ -379,7 +418,28 @@ img {
     
 }
 
+.check-box {
+    background-image: url(../img/checkbox-off.svg);
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-left: -40px;
+}
 
+.check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.check-input:checked + .check-box {
+    background-image: url(../img/checkbox-on.svg);
+    width: 27px;
+} 
+
+.check-input:disabled + .check-box {
+    background-image: url(../img/check-box-disabled-off.svg);
+} 
 
 .rank {
     background-color: var(--basic-grey);
@@ -419,17 +479,64 @@ fieldset:nth-of-type(2) {
     margin-right: 340px;
 }
  
-
 .form-filter {
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     background-image: url(../img/filter-blur-background.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 217px;
+    padding-top: 26px;
+    padding-bottom: 32px;
 }
+
+.range-controls {
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .range-controls .scale {
+    height: 2px;
+    background-color: var(--basic-white-opacity3);
+    width: 296px;
+  }
+  
+  .range-controls .bar {
+    width: 76%;
+    height: 2px;
+    background-color: var(--basic-white);
+  }
+  
+  .range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-image: url(../img/filter-button.svg);
+  }
+  
+  .range-controls .toggle:hover {
+      width: 24px;
+      height: 24px;
+      background-size: cover;
+      top: 29px;
+  }
+
+  .range-controls .toggle-min {
+    left: 0px;
+  }
+  
+  .range-controls .toggle-max {
+    left: 233px;
+  }
 
 .form-filter legend {
     font-size: 16px;
@@ -439,11 +546,36 @@ fieldset:nth-of-type(2) {
 .form-filter li {
     margin-bottom: 0;
     margin-top: 23px;
+    margin-left: 40px;
 }
 
 .filter-price h3{
     margin: 0;
     padding-top: 26px;
+}
+
+.filter-range {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid var(--basic-white);
+    border-radius: 2px;
+    width: 317px;
+    position: relative;
+}
+
+.filter-range p{
+    padding: 7px 35px;
+    margin: 0px;
+}
+
+.filter-range::before{
+    content: "";
+    width: 2px;
+    height: 22px;
+    background-color: var(--basic-white);
+    position: absolute;
+    left: 50%;
+    top: 9px;    
 }
 
 .button-view {
@@ -454,6 +586,11 @@ fieldset:nth-of-type(2) {
     text-transform: uppercase;
     margin: 0 auto;
     display: block;
+}
+
+.button-view:hover {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
 }
 
 .sorting {
@@ -571,8 +708,22 @@ fieldset:nth-of-type(2) {
 .academy-link {
     display: flex;
     align-items: center;
+    padding-top: 18px;
 }
-  
+ 
+.academy-link svg {
+    width: 115px;
+    fill: var(--basic-black);
+}
+
+.academy-link svg:hover {
+    fill: var(--basic-blue-normal);
+}
+
+.academy-link svg:active {
+    fill: var(--basic-academy-hover);
+}
+
 .academy-link p {
     padding-right: 8px;
 }
@@ -595,6 +746,15 @@ fieldset:nth-of-type(2) {
 
 .hotel-info h2 {
     margin: 0;
+    width: fit-content;
+}
+
+.hotel-info h2:hover {
+    color: var(--basic-blue-normal);
+}
+
+.hotel-info h2:active {
+    color: var(--basic-grey-opacity3);
 }
 
 .hotel-info {
@@ -626,8 +786,12 @@ fieldset:nth-of-type(2) {
 } 
 
 .feature-item {
-    min-width: 400px;
+    width: 400px;
     text-align: center;
+    padding-right: 49px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 51px;
 }
 
 .feature-facts {
@@ -635,9 +799,41 @@ fieldset:nth-of-type(2) {
     flex-wrap: wrap;
 }
 
+.feature-info p {
+    color: var(--basic-features-subtitle);
+    margin-bottom: 0px;
+}
+
+.feature-item h3 {
+    margin-top: 0px;
+}
+
+.housing::before {
+    content: url(../img/icon-1.svg);
+    width: 72px;
+    height: 75px;
+    margin-top: 60px;
+}
+
+.food::before {
+    content: url(../img/icon-3.svg);
+    width: 70px;
+    height: 75px;
+}
+
+.souvenirs::before {
+    content: url(../img/icon-2.svg);
+    width: 64px;
+    height: 77px;
+}
+
 .fact-item {
     width: 400px;
     text-align: center; 
+    padding-top: 60px;
+    padding-left: 52px;
+    padding-right: 52px;
+    padding-bottom: 52px;
 }
 
 .feature-info.real-city {
@@ -648,7 +844,6 @@ fieldset:nth-of-type(2) {
 
 .real-city .feature-item {    
     background-color: var(--basic-blue-normal);
-    color: var(--basic-white);
     width: 400px;
     padding-right: 52px;
     padding-left: 52px;
@@ -658,11 +853,13 @@ fieldset:nth-of-type(2) {
 .real-city h3 {
     margin-top: 0;
     margin-bottom: 25px;
+    color: var(--basic-white);
 }
 
 .real-city p {
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    color: var(--basic-white);
 }
 
 .feature-info.devil-bridge {
@@ -673,7 +870,6 @@ fieldset:nth-of-type(2) {
 
 .devil-bridge .feature-item{
     background-color: var(--basic-blue-normal);
-    color: var(--basic-white);
     width: 400px;
     padding-right: 49px;
     padding-left: 50px;
@@ -681,11 +877,13 @@ fieldset:nth-of-type(2) {
 }
 
 .devil-bridge h3 {
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 25px;
+    color: var(--basic-white);
 }
 
 .devil-bridge p {
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    color: var(--basic-white);
 }
