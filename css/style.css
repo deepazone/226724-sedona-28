@@ -300,6 +300,17 @@ img {
     padding-left: 12px;
 }
 
+.search-departure input:hover,
+.search-coming input:hover  {
+    background-color: var(--basic-form-hover);
+}
+
+.search-departure input:active,
+.search-coming input:active {
+    background-color: var(--basic-white);
+    border: 2px solid var(--basic-frame-grey);
+}
+
 .calendar-button {
     border: none;
     padding: 0;
@@ -360,14 +371,6 @@ img {
     border: none;
     margin-bottom: 30px;
     margin-left: -4px;
-}
-
-.form-search input:hover {
-    background-color: var(--basic-form-hover);
-}
-
-.form-search input:active {
-    background-color: var(--basic-white);
 }
 
 .contact-sedona {
