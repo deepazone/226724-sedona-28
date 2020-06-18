@@ -324,11 +324,11 @@ img {
     fill: var(--basic-form-grey);
 }
 
-.calendar-button svg:hover {
+.calendar-button:hover svg {
     fill: var(--basic-black);
 }
 
-.calendar-button svg:active {
+.calendar-button:active svg {
     fill: var(--basic-blue-normal);
 }
 
@@ -427,12 +427,6 @@ img {
     width: 23px;
     height: 23px;
     margin-left: -40px;
-}
-
-.check-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
 
 .check-input:checked + .check-box {
@@ -564,12 +558,18 @@ fieldset:nth-of-type(2) {
     border-radius: 2px;
     width: 317px;
     position: relative;
+    padding: 7px;
 }
 
-.filter-range p{
-    padding: 7px 35px;
-    margin: 0px;
-}
+.filter-range input {
+    width: 52px;
+    background-color: transparent;
+    border: none;
+    color: var(--basic-white);
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 5px;
+  }
 
 .filter-range::before{
     content: "";
@@ -808,7 +808,8 @@ fieldset:nth-of-type(2) {
 }
 
 .feature-item h3 {
-    margin-top: 0px;
+    margin: 0 auto;
+    width: 119px;
 }
 
 .housing::before {
@@ -854,9 +855,7 @@ fieldset:nth-of-type(2) {
 }
 
 .real-city h3 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: var(--basic-white);
+        color: var(--basic-white);
 }
 
 .real-city p {
@@ -880,8 +879,6 @@ fieldset:nth-of-type(2) {
 }
 
 .devil-bridge h3 {
-    margin-top: 0px;
-    margin-bottom: 25px;
     color: var(--basic-white);
 }
 
