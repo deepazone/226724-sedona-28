@@ -1,16 +1,13 @@
-:root { 
+:root {
     --basic-black: #000000;
-    
     --basic-white: #ffffff;
     --basic-white-opacity: rgba(255, 255, 255, 0.9);
     --basic-white-opacity3: rgba(255, 255, 255, 0.3);
     --basic-grey-opacity3: rgba(35, 31, 32, 0.3);
-  
     --basic-active-link: #231F20;
     --basic-blue-normal: #81B3D2;
     --basic-blue-hover: #669EC0;
     --basic-blue-active: #5496BD;
-  
     --basic-brown-normal: #766357;
     --basic-brown-hover: #604E43;
     --basic-brown-active: #503E33;
@@ -23,15 +20,17 @@
     --basic-form-hover: #EBEBEB;
     --basic-academy-hover: #BDBBBC;
 }
-  
-*, *::before, *::after { box-sizing: border-box; }
-  
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0 auto;
     width: 1200px;
     padding: 0;
     font-family: 'PT Sans', Arial, sans-serif;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -42,11 +41,11 @@ body {
 }
 
 img {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-.main-headline { 
+.main-headline {
     font-size: 21px;
     text-align: center;
     margin: 0;
@@ -65,17 +64,17 @@ img {
     min-width: 100%;
     padding-top: 14px;
     padding-bottom: 14px;
-    background-color: var(--basic-white);  
+    background-color: var(--basic-white);
 }
 
 .site-navigation li:nth-child(2) {
-  margin-right: 26%;
-}   
+    margin-right: 26%;
+}
 
 .site-navigation a {
-  font-style: normal;
-  font-weight: bold;
-  text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .logo-main-header {
@@ -86,13 +85,13 @@ img {
     z-index: 5;
 }
 
-.site-navigation a{
-    color: var(--basic-black);    
+.site-navigation a {
+    color: var(--basic-black);
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-      color: var(--basic-blue-normal);
+    color: var(--basic-blue-normal);
 }
 
 .site-navigation a:active {
@@ -104,14 +103,14 @@ img {
     background-image: url(../img/main-background.jpg);
     background-position: top center;
     background-repeat: no-repeat;
-    background-color:#81B3D2; 
+    background-color: #81B3D2;
     text-align: center;
     padding-top: 77px;
     padding-bottom: 80px;
     position: relative;
 }
 
-.main-image::after{
+.main-image::after {
     content: url(../img/main-image-shape.svg);
     position: absolute;
     bottom: -9px;
@@ -169,22 +168,22 @@ img {
     border: none;
 }
 
-.search:hover { 
-    background-color: var(--basic-brown-hover); 
+.search:hover {
+    background-color: var(--basic-brown-hover);
 }
- 
-.search:active { 
+
+.search:active {
     background-color: var(--basic-brown-active);
     color: var(--basic-white-opacity3);
 }
 
 .main-footer {
-    background-color: var(--basic-white-opacity); 
+    background-color: var(--basic-white-opacity);
 }
 
 .icon-set {
-   list-style: none;
-   margin: 0;
+    list-style: none;
+    margin: 0;
 }
 
 .twitter {
@@ -196,7 +195,6 @@ img {
     background-position: center;
     margin-right: 5px;
 }
-
 
 .facebook {
     background-image: url(../img/fb-icon.svg);
@@ -222,7 +220,7 @@ img {
 .facebook:hover,
 .facebook:focus,
 .youtube:hover,
-.youtube:focus{
+.youtube:focus {
     background-color: var(--basic-blue-hover);
 }
 
@@ -292,7 +290,7 @@ img {
     width: 100%;
     display: flex;
     justify-content: space-between;
-}    
+}
 
 .search-departure input,
 .search-coming input {
@@ -301,7 +299,7 @@ img {
 }
 
 .search-departure input:hover,
-.search-coming input:hover  {
+.search-coming input:hover {
     background-color: var(--basic-form-hover);
 }
 
@@ -339,7 +337,7 @@ img {
 }
 
 .search-adult button, 
-.search-kids button{
+.search-kids button {
     background-color: var(--basic-grey);
     border: none;
     padding-bottom: 8px;
@@ -360,7 +358,7 @@ img {
     border: none;
 }
 
-.form-search input{
+.form-search input {
     height: 38px;
     background-color: var(--basic-grey);
     color: var(--basic-black);
@@ -374,11 +372,12 @@ img {
 }
 
 .contact-sedona {
+    text-align: center;
     font-weight: 700;
     font-size: 21px;
 }
 
-.hotel-info h2{
+.hotel-info h2 {
     font-size: 21px;
     font-weight: 700;
 }
@@ -418,7 +417,6 @@ img {
 .reserved:active {
     background-color: var(--basic-brown-active);
     color: var(--basic-white-opacity3);
-    
 }
 
 .check-box {
@@ -432,11 +430,11 @@ img {
 .check-input:checked + .check-box {
     background-image: url(../img/checkbox-on.svg);
     width: 27px;
-} 
+}
 
 .check-input:disabled + .check-box {
     background-image: url(../img/check-box-disabled-off.svg);
-} 
+}
 
 .rank {
     background-color: var(--basic-grey);
@@ -461,21 +459,21 @@ img {
     color: var(--basic-blue-hover);
 }
 
-.form-filter ul{
+.form-filter ul {
     margin: 0;
     list-style: none;
     padding-left: 0;
 }
 
 .form-filter fieldset {
-  border: none;
-  padding: 0;
+    border: none;
+    padding: 0;
 }
 
 fieldset:nth-of-type(2) {
     margin-right: 340px;
 }
- 
+
 .form-filter {
     background-color: var(--basic-blue-normal);
     color: var(--basic-white);
@@ -496,21 +494,21 @@ fieldset:nth-of-type(2) {
     padding-top: 39px;
     padding-right: 20px;
     padding-left: 20px;
-  }
-  
-  .range-controls .scale {
+}
+
+.range-controls .scale {
     height: 2px;
     background-color: var(--basic-white-opacity3);
     width: 296px;
-  }
-  
-  .range-controls .bar {
+}
+
+.range-controls .bar {
     width: 76%;
     height: 2px;
     background-color: var(--basic-white);
-  }
-  
-  .range-controls .toggle {
+}
+
+.range-controls .toggle {
     position: absolute;
     top: 31px;
     left: 0;
@@ -518,22 +516,22 @@ fieldset:nth-of-type(2) {
     height: 20px;
     padding: 0;
     background-image: url(../img/filter-button.svg);
-  }
-  
-  .range-controls .toggle:hover {
-      width: 24px;
-      height: 24px;
-      background-size: cover;
-      top: 29px;
-  }
+}
 
-  .range-controls .toggle-min {
+.range-controls .toggle:hover {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    top: 29px;
+}
+
+.range-controls .toggle-min {
     left: 0px;
-  }
-  
-  .range-controls .toggle-max {
+}
+
+.range-controls .toggle-max {
     left: 233px;
-  }
+}
 
 .form-filter legend {
     font-size: 16px;
@@ -546,7 +544,7 @@ fieldset:nth-of-type(2) {
     margin-left: 40px;
 }
 
-.filter-price h3{
+.filter-price h3 {
     margin: 0;
     padding-top: 26px;
 }
@@ -569,16 +567,16 @@ fieldset:nth-of-type(2) {
     font-family: inherit;
     font-size: inherit;
     padding-left: 5px;
-  }
+}
 
-.filter-range::before{
+.filter-range::before {
     content: "";
     width: 2px;
     height: 22px;
     background-color: var(--basic-white);
     position: absolute;
     left: 50%;
-    top: 9px;    
+    top: 9px;
 }
 
 .button-view {
@@ -613,7 +611,7 @@ fieldset:nth-of-type(2) {
     font-weight: 700;
     min-width: 162px;
 }
-  
+
 .sort {
     padding-right: 40px;
 }
@@ -640,14 +638,14 @@ fieldset:nth-of-type(2) {
     text-transform: uppercase;
     border-bottom: 1px dashed var(--basic-blue-normal);
 }
-  
+
 .at-type:hover, 
 .at-type:focus {
     color: var(--basic-blue-normal);
     border-bottom: 1px dashed var(--basic-blue-normal);
     opacity: 1;
 }
-  
+
 .at-type:active {
     border: none;
     color: var(--basic-black);
@@ -659,30 +657,30 @@ fieldset:nth-of-type(2) {
 }
 
 .icon-up-rating,
-.icon-down-rating{
+.icon-down-rating {
     fill: var(--basic-icon-normal);
-} 
+}
 
 .at-rating {
     padding: 0px;
     background: transparent;
-    border: none;    
+    border: none;
 }
 
 .at-rating:hover .icon-up-rating,
 .at-rating:hover .icon-down-rating {
     fill: var(--basic-black);
-} 
+}
 
 .at-rating:active .icon-up-rating,
 .at-rating:active .icon-down-rating {
     fill: var(--basic-blue-hover);
-} 
+}
 
 .icon-set {
     display: flex;
 }
-  
+
 .main-footer {
     display: flex;
     justify-content: space-around;
@@ -693,19 +691,22 @@ fieldset:nth-of-type(2) {
     z-index: 100;
     min-width: 100%;
 }
-  
+
 .main-footer ul {
     padding: 0px;
 }
-  
+
 .footer-hashtag {
     margin-top: 23px;
     margin-bottom: 0;
 }
 
 .footer-phone {
-    margin-top: 10px;
-    margin-bottom: 37px;
+    margin-top: 3px;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: var(--basic-black);
+    display: block;
 }
 
 .academy-link {
@@ -713,7 +714,7 @@ fieldset:nth-of-type(2) {
     align-items: center;
     padding-top: 18px;
 }
- 
+
 .academy-link svg {
     width: 115px;
     fill: var(--basic-black);
@@ -730,7 +731,7 @@ fieldset:nth-of-type(2) {
 .academy-link p {
     padding-right: 8px;
 }
-  
+
 .hotel-card {
     display: grid;
     grid-template-columns: 135px 1fr 110px;
@@ -738,7 +739,7 @@ fieldset:nth-of-type(2) {
     border-bottom: solid var(--basic-frame-grey) 1px;
     padding: 30px 70px;
 }
-  
+
 .hotel-info a {
     margin: 0;
 }
@@ -763,12 +764,12 @@ fieldset:nth-of-type(2) {
 .hotel-info {
     padding-left: 29px;
 }
-  
+
 .price-info-hotel {
     display: grid;
     grid-template-columns: 110px 142px;
 }
-  
+
 .hotel-cards-container {
     padding-bottom: 124px;
 }
@@ -784,9 +785,9 @@ fieldset:nth-of-type(2) {
 }
 
 .devil-bridge img,
-.real-city img  {
+.real-city img {
     min-width: 800px;
-} 
+}
 
 .feature-item {
     width: 400px;
@@ -833,7 +834,7 @@ fieldset:nth-of-type(2) {
 
 .fact-item {
     width: 400px;
-    text-align: center; 
+    text-align: center;
     padding-top: 60px;
     padding-left: 52px;
     padding-right: 52px;
@@ -843,10 +844,10 @@ fieldset:nth-of-type(2) {
 .feature-info.real-city {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch; 
+    align-items: stretch;
 }
 
-.real-city .feature-item {    
+.real-city .feature-item {
     background-color: var(--basic-blue-normal);
     width: 400px;
     padding-right: 52px;
@@ -855,7 +856,7 @@ fieldset:nth-of-type(2) {
 }
 
 .real-city h3 {
-        color: var(--basic-white);
+    color: var(--basic-white);
 }
 
 .real-city p {
@@ -868,9 +869,9 @@ fieldset:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-} 
+}
 
-.devil-bridge .feature-item{
+.devil-bridge .feature-item {
     background-color: var(--basic-blue-normal);
     width: 400px;
     padding-right: 49px;
