@@ -470,8 +470,8 @@ img {
     padding: 0;
 }
 
-fieldset:nth-of-type(2) {
-    margin-right: 340px;
+.form-filter fieldset:nth-of-type(2) {
+    margin-right: 245px;;
 }
 
 .form-filter {
@@ -479,20 +479,21 @@ fieldset:nth-of-type(2) {
     color: var(--basic-white);
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: url(../img/filter-blur-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 217px;
     padding-top: 26px;
     padding-bottom: 32px;
+    padding-left: 68px;
+    padding-right: 70px;
 }
 
 .range-controls {
     position: relative;
     margin-bottom: 30px;
     padding-top: 39px;
-    padding-right: 20px;
     padding-left: 20px;
 }
 
