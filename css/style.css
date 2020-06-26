@@ -132,6 +132,7 @@ img {
 
 .interested {
     text-align: center;
+    position: relative;
 }
 
 .interested-text-item {
@@ -166,6 +167,9 @@ img {
     font-family: inherit;
     font-weight: 700;
     border: none;
+    width: 569px;
+    position: relative;
+    z-index: 10;
 }
 
 .search:hover {
@@ -242,15 +246,25 @@ img {
 }
 
 .form-search {
+    display: none;
+}
+
+.shake-error {
+    animation: shake 0.6s;
+}
+
+.form-search-open {
+    left: 0;
+    right: 0;
     display: flex;
     flex-wrap: wrap;
     background-color: var(--basic-white);
-    width: 540px;
-    left: 50%;
+    width: 568px;
     padding: 55px;
-    transform: translateX(-50%);
     position: absolute;
     justify-content: space-between;
+    animation: bounce 0.6s;
+    margin: auto;
 }
 
 .form-search p {
@@ -294,7 +308,7 @@ img {
 
 .search-departure input,
 .search-coming input {
-    width: 330px;
+    width: 346px;
     padding-left: 12px;
 }
 
@@ -349,7 +363,10 @@ img {
     font-size: 23px;
 }
 
-.search-adult label, 
+.search-adult label {
+    margin-right: 42px;
+}
+
 .search-kids label {
     margin-right: 25px;
 }
@@ -888,4 +905,22 @@ img {
     margin-bottom: 0px;
     margin-top: 25px;
     color: var(--basic-white);
+}
+
+@keyframes bounce {
+    from {     
+        top: 200px;   
+      }   
+    to {
+        top: 322px;
+       }
+}
+
+@keyframes shake {
+    from {     
+        left: 10px;   
+      }   
+    to {
+        right: 10px;
+       }
 }

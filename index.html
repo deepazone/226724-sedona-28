@@ -6,7 +6,7 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize-min.css" />
-  <link rel="stylesheet" href="css/style-min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -102,7 +102,7 @@
       <form class="form-search" action="https://echo.htmlacademy.ru" method="POST">
         <p class="search-coming">
           <label for="date-in">Дата заезда:</label>
-          <input id="date-in" type="text" name="date-in" placeholder="24 апреля 2017">
+          <input id="date-in" type="text" name="date-in" placeholder="24 апреля 2017" required>
           <button class="calendar-button">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@
         </p>
         <p class="search-departure">
           <label for="date-out">Дата выезда:</label>
-          <input id="date-out" type="text" name="date-out" placeholder="4 июля 2017">
+          <input id="date-out" type="text" name="date-out" placeholder="4 июля 2017" required>
           <button class="calendar-button">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +131,7 @@
         <p class="search-adult">
           <label for="adult">Взрослые:</label>
           <button type="button">-</button>
-          <input id="adult" type="text" name="adult" value="2">
+          <input id="adult" type="text" name="adult" value="2" required>
           <button type="button">+</button>
         </p>
         <p class="search-kids">
@@ -173,6 +173,7 @@
     </div>
 
   </footer>
+  <script src="js/popup.js"></script>  
 </body>
 
 </html>
