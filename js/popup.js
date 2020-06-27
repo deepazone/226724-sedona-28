@@ -15,6 +15,13 @@ try {
 searchButton.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	formSearch.classList.toggle("form-search-open");
+
+	if (storage) {
+		dateIn.value = storage;
+		dateOut.focus();
+	 } else {
+		dateIn.focus();
+	 }
 });
 
 if (storage) {
@@ -34,9 +41,6 @@ formSearch.addEventListener("submit", function(evt) {
 		  console.log('Форма отправлена');
 		}
 	}	
-});
-
-formSearch.addEventListener("submit", function(evt) {
 	if (!dateOut.value) {
 		evt.preventDefault();
 		console.log('Введите значение');
