@@ -2,55 +2,37 @@ var searchButton = document.querySelector(".search");
 var formSearch = document.querySelector(".form-search");
 var dateIn = document.querySelector("[name=date-in]");
 var dateOut = document.querySelector("[name=date-out]");
+var adult = document.querySelector(".adult")
+var kids = document.querySelector(".kids")
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
-	storage = localStorage.getItem("date-in");
+   storage = localStorage.getItem("adult");
  } catch (err) {
-	isStorageSupport = false;
+   isStorageSupport = false;
  }
 
 searchButton.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	formSearch.classList.toggle("form-search-open");
-
-	if (storage) {
-		dateIn.value = storage;
-		dateOut.focus();
-	 } else {
-		dateIn.focus();
-	 }
+	formSearch.classList.remove('shake-error');
 });
 
-if (storage) {
-	dateIn.value = storage;
- }
-
 formSearch.addEventListener("submit", function(evt) {
-	if (!dateIn.value) {
+	if (!dateIn.value || !dateOut.value){
 		evt.preventDefault();
 		console.log('Введите значение');
-		formSearch.classList.add('shake-error');
 		formSearch.offsetWidth = formSearch.offsetWidth;
+		formSearch.classList.add('shake-error');
 		dateIn.focus();
 	} else {
-		if (isStorageSupport) {
-		  localStorage.setItem("date-in", dateIn.value);
-		  console.log('Форма отправлена');
-		}
-	}	
-	if (!dateOut.value) {
-		evt.preventDefault();
-		console.log('Введите значение');
-		formSearch.classList.add('shake-error');
-		formSearch.offsetWidth = formSearch.offsetWidth;
-		dateOut.focus();
-	} else {
-		if (isStorageSupport) {
-		  localStorage.setItem("date-out", dateOut.value);
-		  console.log('Форма отправлена');
-		}
-	}	
+		if (isStorageSupport){
+			localStorage.setItem("adult", adult.value);
+			localStorage.setItem("adult", kids.value);
+			console.log('Форма отправлена');
+			formSearch.classList.remove('shake-error');
+		 }
+	 }   
 });
