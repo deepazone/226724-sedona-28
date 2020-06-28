@@ -265,7 +265,7 @@ img {
 }
 
 .shake-error {
-    -webkit-animation: shake 0.2s;
+    animation: shake 0.2s;
 }
 
 .form-search p {
@@ -311,6 +311,7 @@ img {
 .search-coming input {
     width: 346px;
     padding-left: 12px;
+    border: 2px solid var(--basic-form-hover);
 }
 
 .search-departure input:hover,
@@ -321,7 +322,7 @@ img {
 .search-departure input:active,
 .search-coming input:active {
     background-color: var(--basic-white);
-    border: 2px solid var(--basic-frame-grey);
+    border-color: var(--basic-frame-grey);
 }
 
 .calendar-button {
@@ -917,7 +918,7 @@ img {
        }
 }
 
-@-webkit-keyframes shake {
+@keyframes shake {
     0%,
     100% {
         -webkit-transform: translateX(0);

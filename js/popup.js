@@ -2,14 +2,14 @@ var searchButton = document.querySelector(".search");
 var formSearch = document.querySelector(".form-search");
 var dateIn = document.querySelector("[name=date-in]");
 var dateOut = document.querySelector("[name=date-out]");
-var adult = document.querySelector(".adult")
-var kids = document.querySelector(".kids")
+var adults = document.querySelector("[name=adults]");
+var kids = document.querySelector("[name=kids]");
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
-   storage = localStorage.getItem("adult");
+	storage = localStorage.getItem("adults");
  } catch (err) {
    isStorageSupport = false;
  }
@@ -17,22 +17,18 @@ try {
 searchButton.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	formSearch.classList.toggle("form-search-open");
-	formSearch.classList.remove('shake-error');
 });
 
 formSearch.addEventListener("submit", function(evt) {
 	if (!dateIn.value || !dateOut.value){
 		evt.preventDefault();
-		console.log('Введите значение');
+		formSearch.classList.remove("shake-error");
 		formSearch.offsetWidth = formSearch.offsetWidth;
-		formSearch.classList.add('shake-error');
-		dateIn.focus();
+		formSearch.classList.add("shake-error");
 	} else {
 		if (isStorageSupport){
-			localStorage.setItem("adult", adult.value);
-			localStorage.setItem("adult", kids.value);
-			console.log('Форма отправлена');
-			formSearch.classList.remove('shake-error');
+			localStorage.setItem("adults", adults.value);
+			localStorage.setItem("kids", kids.value);
 		 }
 	 }   
 });
