@@ -16,7 +16,7 @@ try {
 
 searchButton.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	formSearch.classList.toggle("form-search-open");
+	formSearch.classList.toggle("form-search-close");
 	formSearch.classList.remove("shake-error");
 });
 
