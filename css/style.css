@@ -74,17 +74,21 @@ img {
     color: var(--basic-black);
     background-color: transparent;
 }
+
 .site-navigation li {
     width: 25%;
 }
+
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
     text-align: left;
 }
+
 .site-navigation li:nth-child(3),
 .site-navigation li:nth-child(4) {
     text-align: right;
 }
+
 .site-navigation li:nth-child(1) {
     padding-left: 72px;
 }
@@ -98,8 +102,6 @@ img {
     font-weight: bold;
     text-decoration: none;
 }
-
-
 
 .logo-main-header {
     position: absolute;
@@ -130,7 +132,7 @@ img {
     background-color: var(--basic-blue-normal);
     text-align: center;
     padding-top: 77px;
-    padding-bottom: 74px;
+    padding-bottom: 72px;
     position: relative;
 }
 
@@ -146,7 +148,7 @@ img {
     margin: 0 auto;
     width: 519px;
     text-align: center;
-    padding-top: 41px;
+    padding-top: 43px;
     padding-bottom: 36px;
 }
 
@@ -220,6 +222,14 @@ img {
     transform: translateX(-4%);
 }
 
+.icon-set li {
+    margin-right: 5px;
+}
+
+.icon-set li:last-child {
+    margin-right: 0;
+}
+
 .twitter {
     background-image: url(../img/twitter.svg);
     background-repeat: no-repeat;
@@ -227,7 +237,7 @@ img {
     width: 46px;
     height: 48px;
     background-position: center;
-    margin-right: 5px;
+    display: block;
 }
 
 .facebook {
@@ -237,7 +247,7 @@ img {
     width: 46px;
     height: 48px;
     background-position: center;
-    margin-right: 5px;
+    display: block;
 }
 
 .youtube {
@@ -247,6 +257,7 @@ img {
     width: 46px;
     height: 48px;
     background-position: center;
+    display: block;
 }
 
 .twitter:hover,
@@ -286,9 +297,8 @@ img {
     position: absolute;
     justify-content: space-between;
     margin: auto;
-    animation: bounce 0.5s;  
+    animation: bounce 0.5s;
 }
-
 
 .form-search-close {
     display: none;
@@ -450,6 +460,7 @@ img {
 .details:hover,
 .details:focus {
     background-color: var(--basic-blue-hover);
+    color: var(--basic-white-opacity3);
 }
 
 .details:active {
@@ -461,7 +472,7 @@ img {
     background-color: var(--basic-brown-normal);
     text-transform: uppercase;
     color: var(--basic-white);
-    padding: 6px 16px;
+    padding: 5px 16px;
     font-size: 14px;
     border: none;
     text-decoration: none;
@@ -483,6 +494,11 @@ img {
     width: 23px;
     height: 23px;
     margin-left: -40px;
+}
+
+.check-input:focus + .check-box {
+    background-image: url(../img/checkbox-off.svg);
+    width: 23px;
 }
 
 .check-input:checked + .check-box {
@@ -582,11 +598,12 @@ img {
     width: 24px;
     height: 24px;
     background-size: cover;
-    top: 29px;
+    top: 19px;
 }
 
 .range-controls .toggle-min {
     left: 0px;
+    top: 20px;
 }
 
 .range-controls .toggle-max {
@@ -700,11 +717,10 @@ img {
 
 .sort-type {
     display: flex;
+    flex-wrap: wrap;
     font-size: 12px;
-    justify-content: space-between;
     padding-left: 2px;
 }
-
 
 .sort-rating {
     display: flex;
@@ -841,7 +857,7 @@ img {
 
 .hotel-info p {
     margin: 0;
-    padding: 8px 0px;
+    padding: 10px 0px;
 }
 
 .hotel-info h2 {
@@ -865,9 +881,10 @@ img {
 
 .price-info-hotel {
     display: grid;
-    grid-template-rows: 32px;
+    grid-template-rows: 33px;
     align-items: self-end;
-    grid-template-columns: 117px 142px;
+    grid-template-columns: 117px 140px;
+    padding-bottom: 4px;
 }
 
 .hotel-cards-container {
@@ -1026,27 +1043,30 @@ img {
     0% {
         top: 159px;
     }
+
     100% {
-        top: 292px; 
+        top: 292px;
     }
-}    
+}
 
 @keyframes shake {
     0%,
     100% {
-        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
+
     10%,
     30%,
     50%,
     70%,
     90% {
-        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
     }
+
     20%,
     40%,
     60%,
     80% {
-        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
     }
-  }
+}
